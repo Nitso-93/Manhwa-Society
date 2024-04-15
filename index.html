@@ -2,6 +2,8 @@
     <head>
         
         <title>Manhwa Society</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/main.css">
     
     </head>
@@ -10,34 +12,151 @@
         
         <header>
             <h1>Tower Of Beginnings</h1>
+            <img src="images/Manhwa Reading Club Logo.jpg" alt="Manhwa Society Logo" id="logo">
+
+            <form class="float-right" id="login">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="Username">
+                <label for="password">Password:</label>
+                <input type="text" name="password" id="password" placeholder="Password">
+                <button type="button" id="login-button" onclick="login()">Login</button>
+            </form>
+            <script>
+                var counter=2;
+                var button=document.getElementById("login-button");
+                function login()
+                {
+                    if(counter%2==0)
+                    {
+                        alert('You have been logged in!');
+                        button.textContent="Logout";
+                    }
+                    else
+                    {
+                        alert('You have been logged out!');
+                        button.textContent="Login";
+                    }
+                    counter+=1;
+                }
+            </script>
         </header>
 
         <nav>
-            <u1>
-                <li><a href="index.html">Tower Entrance</a></li>
-                <li><a href="img_gallery.html">Memories Of The Last One</a></li>
-                <li><a href="current_members.html">Current Awakened</a></li>
-                <li><a href="event_calender.html">Hidden Event</a></li>
-                <li><a href="contact_us.html">Floor Of Calling</a></li>
-            </u1>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="img_gallery.html">Image Gallery</a></li>
+                <li><a href="current_members.html">Current Members</a></li>
+                <li><a href="event_calender.html">Events</a></li>
+                <li><a href="trending_books.html">Current Hot Topics</a></li>
+                <li><a href="shop.html">Merch Shop</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
         </nav>
 
         <main>
-            <div>
-                <h3>Welcome To The Tower Of Beginnings</h3>
-                <p>
-                    This is a small but rapidly growing club for all the manhwa enjoyers out there who want to just relax and read some manhwa,
-                    get some reccomendations from fellow readers and even vent about characters you loved that were written off the story. (╥﹏╥)
-                </p>
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!--Indicators-->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+                </div>
+
+                <!--Wrapper-->
+                <div class="carousel-inner">
+
+                    <!--Item 1-->
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/Solo leveling homepage.webp" alt="Solo Leveling Manhwa Image">
+                        <div class="carousel-caption">
+                            <h3 class="ImageCaption">Solo Leveling</h3>
+                        </div>                    
+                    </div>
+
+                    <!--Item 2-->
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/Eleceed homepage.jpg" alt="Eleceed Manhwa Image">
+                        <div class="carousel-caption">
+                            <h3 class="ImageCaption">Eleceed</h3>
+                        </div>
+                    </div>
+
+                    <!--Item 3-->
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/The greatest estate developer homepage.jpg" alt="The Greatest Estate Developer Manhwa Image">
+                        <div class="carousel-caption">
+                            <h3 class="ImageCaption">The Greatest Estate Developer</h3>
+                        </div>
+                    </div>
+
+                    <!--Item 4-->
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/Windbreaker homepage.jpg" alt="Windbreaker Manhwa Image">
+                        <div class="carousel-caption">
+                            <h3 class="ImageCaption">Windbreaker</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Left And Right Controls-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div id="left-col">
+                <div id="home-text">
+
+                    <h5>Welcome to the Manhwa Society Club, where ink meets imagination, and panels come alive! 📖🎨</h5>
+                    
+                    <h5>What Is Manhwa?</h5>
+                    <p>
+                        Manhwa refers to Korean comic books or graphic novels. Unlike traditional manga (Japanese comics), manhwa boasts its own unique art style, storytelling techniques, and cultural nuances. From heart-pounding romance to epic fantasy adventures, manhwa offers a diverse range of genres that captivate readers worldwide.
+                    </p>
+
+                    <h5>Exploration:</h5>
+                    <p>
+                        We delve into the vibrant world of manhwa, exploring hidden gems and popular titles alike. Whether you're a seasoned reader or a curious newcomer, there's a place for you here.
+                    </p>
+
+                    <h5>Community:</h5>
+                    <p>
+                        The Manhwa Society Club is more than just a reading group; it's a community of like-minded enthusiasts. Share your favorite series, discuss plot twists, and connect with fellow fans.
+                    </p>
+
+                    <h5>Events and Activities:</h5>
+                    <p>
+                        Expect lively discussions, themed reading challenges, and even cosplay meet-ups. We celebrate manhwa through screenings, art showcases, and collaborative projects.
+                    </p>
+
+                    <h5>Creators's Spotlight:</h5>
+                    <p>
+                        We shine a spotlight on talented manhwa artists and writers. Learn about their creative process, inspirations, and the magic behind each illustrated page.
+                    </p>
+
+                    <h5>Join Us! Whether you're drawn to romance, action, mystery, or supernatural tales, the Manhwa Society Club invites you to embark on a visual journey. Grab your virtual reading glasses, sip some metaphorical tea, and let's explore manhwa together!</h5>    
+                
+                </div>
+            
+            </div>
+
+            <div id="right-col">
+                <aside>
+                    <h3>Latest Tweets</h3>
+                    <a class="twitter-timeline" data-lang="en" data-height="570" data-theme="light" href="https://twitter.com/SL_AriseEN?ref_src=twsrc%5Etfw">Tweets by SL_AriseEN</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </aside>
             </div>
         </main>
 
-        <aside>
-
-        </aside>
-
         <footer>
-
+            <p>Copyright Ostin Mathias</p>
         </footer>
     
     </body>

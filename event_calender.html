@@ -2,6 +2,8 @@
     <head>
         
         <title>Manhwa Society</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/main.css">
     
     </head>
@@ -10,27 +12,26 @@
         
         <header>
             <h1>Tower Of Beginnings</h1>
+            <img src="images/Manhwa Reading Club Logo.jpg" alt="Manhwa Society Logo" id="logo">
         </header>
 
         <nav>
-            <u1>
-                <li><a href="index.html">Tower Entrance</a></li>
-                <li><a href="img_gallery.html">Memories Of The Last One</a></li>
-                <li><a href="current_members.html">Current Awakened</a></li>
-                <li><a href="event_calender.html">Hidden Event</a></li>
-                <li><a href="contact_us.html">Floor Of Calling</a></li>
-            </u1>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="img_gallery.html">Image Gallery</a></li>
+                <li><a href="current_members.html">Current Members</a></li>
+                <li><a href="event_calender.html">Events</a></li>
+                <li><a href="trending_books.html">Current Hot Topics</a></li>
+                <li><a href="shop.html">Merch Shop</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
         </nav>
 
         <main>
-            <div>
-                <h3>Room Of Foresight</h3>
-                <p>
-                    Page for all future events.
-                </p>
-            </div>
+            <div id="left-col">
+                
+                <h3> Upcoming Events Calender </h3>
 
-            <div>
                 <table>
                     <tr>
                         <td></td>                    
@@ -46,35 +47,89 @@
                     <tr>               
                         <th>W1</th>                
                         <td></td>                
+                        <td>Online Get Together! <br/> Discord @ Manhwa Society</td>                
                         <td></td>                
+                        <td>Online Get Together! <br/> Discord @ Manhwa Society</td>                
                         <td></td>                
-                        <td></td>                
-                        <td></td>                
-                        <td>Welcome back drinks! <br/> In-Person @ the Pub</td>                
+                        <td>Welcome Back Drinks! <br/> Contact Events Organiser For Details</td>                
                         <td></td>               
                     </tr>                
                 
                     <tr>                
                         <th>W2</th>               
-                        <td></td>                
-                        <td>Speedrunning Starters! <br/> In-person @ the club house</td>               
+                        <td>Online Get Together! <br/> Discord @ Manhwa Society</td>                
                         <td></td>               
+                        <td>Online Get Together! <br/> Discord @ Manhwa Society</td>               
                         <td></td>                
+                        <td>Online Read Along! <br/> Discord @ Manhwa Society</td>              
                         <td></td>              
+                        <td>Game Night! <br/> Discord @ Manhwa Society</td>               
+                    </tr> 
+                    
+                    <tr>               
+                        <th>W3</th>                
+                        <td style="font-size: larger;">/--------------------<br/>\--------------------</td>                
+                        <td style="font-size: larger;">---------------------<br/>---------------------</td>                
+                        <td style="font-size: larger;">---------------------<br/>---------------------</td>                
+                        <td style="font-size: larger;">------ Break -----<br/>----- Week -----</td>                
+                        <td style="font-size: larger;">--------------------<br/>--------------------</td>                
+                        <td style="font-size: larger;">---------------------------<br/>---------------------------</td>               
+                        <td style="font-size: larger;">-------------------\<br/>-------------------/</td>               
+                    </tr>  
+
+                    <tr>                
+                        <th>W4</th>               
+                        <td></td>                
+                        <td>Online Get Together! <br/> Discord @ Manhwa Society</td>                
+                        <td></td>                
+                        <td>Online Get Together! <br/> Discord @ Manhwa Society</td>                
+                        <td></td>                
+                        <td>In Person Hangout! <br/> Contact Events Organiser For Details</td>                
                         <td></td>              
-                        <td></td>               
-                    </tr>           
+                    </tr>  
                 </table>
-            </div>>
-        
+            </div>
+
+            <div id="right-col">
+                <form id="eventForm">
+                    <fieldset>
+                        <p>Want to suggest an event? Share it with us using the form below!</p>
+                        
+                        <label for="event_title">Event Title:</label>
+                        <input type="text" placeholder="Event Title" name="event_title">
+                        <br/>
+                        <label for="event_date">Event Date:</label>
+                        <input type="date" name="event_date">
+                        <br/>
+                        <button onclick="submitEvent()">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <script>
+                function submitEvent()
+                {
+                    var title=document.forms["eventForm"]["event_title"].value;
+                    var date=document.forms["eventForm"]["event_date"].value;
+
+                    if(title=="")
+                    {
+                        alert("The Name Of The Event Cannot Be Blank!");
+                    }
+                    else if(date.length==0)
+                    {
+                        alert("The Date Of The Event Cannot Be Blank!");
+                    }
+                    else
+                    {
+                        alert("Event Submitted! The Society Will Get Back To You Soon <3");
+                    }
+                }
+            </script>
         </main>
 
-        <aside>
-
-        </aside>
-
         <footer>
-
+            <p>Copyright Ostin Mathias</p>
         </footer>
     
     </body>

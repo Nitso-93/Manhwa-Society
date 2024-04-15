@@ -1,4 +1,314 @@
+/*Webpages Main Color And Text CSS Code*/
+body
+{
+    background-color: #221426;
+}
+
 header
 {
-    color:#0000ff;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+}
+
+#logo
+{
+    height: 75px;
+    width: 75px;
+    float: left;
+    margin-right: 10px;
+}
+
+h1,h2,h3,h4,h5,h6,p
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:black;
+    padding: 5px;
+}
+
+h1
+{
+    padding: 10px;
+    display: inline;
+    font-size: 46pt;
+}
+
+h3
+{
+    padding: 10px;
+    font-size: 20pt;
+}
+
+p
+{
+    font-size: 10pt;
+}
+
+main
+{
+    background-color: white;
+    border-radius: 10px;
+}
+
+aside
+{
+    background-color: white;
+    border-radius: 10px;
+}
+
+footer
+{
+    background-color: #a480f2;
+    border-style: inset;
+    border-width: 5px;
+    border-color: white;
+    text-align: left;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    border-radius: 10px;
+}
+
+/*Navigation CSS Code*/
+
+nav ul
+{
+    border-style: inset;
+    border-width: 5px;
+    border-color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li
+{
+    background-color: #a480f2;
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    width: 14.286%;
+    padding: 20px;
+}
+
+nav li a
+{
+    color:white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li:hover
+{
+    background-color: black;
+}
+
+.active
+{
+    background-color: #1d1340;
+}
+
+/*Table CSS Code*/
+
+table
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-collapse: collapse;
+}
+
+table td, table th
+{
+    border: 5px,solid,#000000;
+}
+
+Table tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+Table tr:hover
+{
+    background-color: #754483;
+}
+
+Table th
+{
+    text-align: center;
+    background-color: #a480f2;
+    color: black;
+}
+
+Table td
+{
+    text-align: center;
+    padding: 10px;
+    color: black;
+}
+
+/*Left And Right Side CSS Code*/
+
+#left-col
+{
+    width: 75%;
+    float:left;
+    background-color: white;
+    border-style: inset;
+    border-width: 5px;
+    border-color: white;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#right-col
+{
+    width: 24%;
+    float:right;
+    background-color: white;
+    border-style: inset;
+    border-width: 5px;
+    border-color: white;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+/*Contact Us CSS Code*/
+
+#contactUs
+{
+    border-style: double;
+    border-width: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+/*Event Form CSS Code*/
+
+#eventForm
+{
+    border-style: double;
+    border-width: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+/*Homepage Text And Login CSS Code*/
+
+#home-text
+{
+    text-align: center;
+}
+
+#login.float-right
+{
+    float: right;
+    margin-top: 25px;
+}
+
+/*Carousel CSS Code*/
+
+.w-100
+{
+    height: 600px;
+}
+
+.ImageCaption
+{
+    color:black;
+    font-size: 50;
+    -webkit-text-stroke: 1px white;
+}
+
+/*Image Gallery CSS Code*/
+
+.gallery-img
+{
+    width: 100%;
+    height: 500px;
+    filter:blur(3px);
+}
+
+#img-gallery
+{
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+
+#img-gallery.row
+{
+    padding: 10px;
+}
+
+/*Trending Manhwa Images CSS Code*/
+
+.trending-manhwa
+{
+    border-style: double;
+    border-color: indigo;
+    border-width: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 500px;
+    background-color: #a480f2;
+}
+
+#trendingManhwa
+{
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+
+#trendingManhwa.row
+{
+    padding: 10px;
+}
+
+/*Shop Text CSS Code*/
+
+#shop-style
+{
+    text-align: center;
+    background-color: #a480f2;
+    border-style: inset;
+    border-width: 10px;
+    border-color: white;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#price-style
+{
+    text-align: center;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Shop Images CSS Code*/
+
+.shop-img
+{
+    padding: 5px;
+    width: 100%;
+    height: 500px;
+}
+
+#shop
+{
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+
+#shop.row
+{
+    padding: 10px;
+}
+
+/*Members Text CSS Code*/
+
+#members
+{
+    text-align: center;
+    margin-top: 10px;
 }

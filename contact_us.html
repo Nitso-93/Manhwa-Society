@@ -2,6 +2,8 @@
     <head>
         
         <title>Manhwa Society</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/main.css">
         
     </head>
@@ -10,34 +12,29 @@
         
         <header>
             <h1>Tower Of Beginnings</h1>
+            <img src="images/Manhwa Reading Club Logo.jpg" alt="Manhwa Society Logo" id="logo">
         </header>
 
         <nav>
-            <u1>
-                <!--Navigation Bar-->
-                <li><a href="index.html">Tower Entrance</a></li>
-                <li><a href="img_gallery.html">Memories Of The Last One</a></li>
-                <li><a href="current_members.html">Current Awakened</a></li>
-                <li><a href="event_calender.html">Hidden Event</a></li>
-                <li><a href="contact_us.html">Floor Of Calling</a></li>
-            </u1>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="img_gallery.html">Image Gallery</a></li>
+                <li><a href="current_members.html">Current Members</a></li>
+                <li><a href="event_calender.html">Events</a></li>
+                <li><a href="trending_books.html">Current Hot Topics</a></li>
+                <li><a href="shop.html">Merch Shop</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
         </nav>
 
         <main>
-            <div>
-                <h3>The Tower Whisperers</h3>
-                <p>
-                    Name, number of those leading the club
-                </p>
-            </div>
-
-            <div>
-                <form>
+            <div id="left-col">
+                <h3>Contact Us</h3>
+                
+                <form id="contactUs">
                     <fieldset>
-                        
                         <!--Contact Us Form Box-->
-                        <legend>Contact The Whisperers Using The Form Below.</legend>
-                        
+
                         <label for="name">Name:</label>
                         <input type="text" name="name" value=""/> <br/>
                         
@@ -57,19 +54,26 @@
                         <input type="file" id="file" name="file">
                         <br><br/>
                         
-                        <input type="submit" value="Submit"/>
-                    
+                        <button type="button" onclick='document.getElementById("form_outcome").innerHTML="Form has been sent successfully!"'>Submit</button>
                     </fieldset>
                 </form>
+                
+                <div>
+                    <p id="form_outcome"></p>
+                </div>
+            
+            </div>
+
+            <div id="right-col">
+                <h3>Latest Manhwa News</h3>
+                
+                <a class="twitter-timeline" data-lang="en" data-height="423" data-theme="light" href="https://twitter.com/MangaMoguraRE?ref_src=twsrc%5Etfw">Tweets by MangaMoguraRE</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </main>
 
-        <aside>
-
-        </aside>
-
         <footer>
-
+            <p>Copyright Ostin Mathias</p>
         </footer>
     
     </body>

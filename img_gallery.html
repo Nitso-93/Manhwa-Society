@@ -2,6 +2,8 @@
     <head>
         
         <title>Manhwa Society</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/main.css">
     
     </head>
@@ -10,33 +12,68 @@
         
         <header>
             <h1>Tower Of Beginnings</h1>
+            <img src="images/Manhwa Reading Club Logo.jpg" alt="Manhwa Society Logo" id="logo">
         </header>
 
         <nav>
-            <u1>
-                <li><a href="index.html">Tower Entrance</a></li>
-                <li><a href="img_gallery.html">Memories Of The Last One</a></li>
-                <li><a href="current_members.html">Current Awakened</a></li>
-                <li><a href="event_calender.html">Hidden Event</a></li>
-                <li><a href="contact_us.html">Floor Of Calling</a></li>
-            </u1>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="img_gallery.html">Image Gallery</a></li>
+                <li><a href="current_members.html">Current Members</a></li>
+                <li><a href="event_calender.html">Events</a></li>
+                <li><a href="trending_books.html">Current Hot Topics</a></li>
+                <li><a href="shop.html">Merch Shop</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
         </nav>
 
-        <main>
-            <div>
-                <h3>Memories Of The Past</h3>
-                <p>
-                    Place for all gallery images of hangouts, books and just fun in general. 
-                </p>
+        <main>            
+            <div id="img-gallery" class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <img id= "image1" src="images/Gallery 1.jpg" class="gallery-img" alt="Fan Drawing"/>
+                        <img id= "image4" src="images/Gallery 4.jpg" class="gallery-img" alt="Solo Leveling Cosplay"/>
+                        <img id= "image7" src="images/Gallery 7.jpg" class="gallery-img" alt="Manhwa Cafe Book Collection"/>
+                    </div>
+                    
+                    <div class="col-sm">
+                        <img id= "image2" src="images/Gallery 2.jpg" class="gallery-img" alt="Manhwa Cafe Banners"/>
+                        <img id= "image5" src="images/Gallery 5.jpg" class="gallery-img" alt="Fan Drawing"/>
+                        <img id= "image8" src="images/Gallery 8.jpg" class="gallery-img" alt="Fan Drawing"/>
+                    </div>
+                    
+                    <div class="col-sm">
+                        <img id= "image3" src="images/Gallery 3.jpg" class="gallery-img" alt="Imperial Princess Cosplay"/>
+                        <img id= "image6" src="images/Gallery 6.jpg" class="gallery-img" alt="Martial Prince Cosplay"/>
+                        <img id= "image9" src="images/Gallery 9.jpg" class="gallery-img" alt="Manhwa Cafe"/>    
+                    </div>
+                </div>
+                
+                <script>
+                    for(let i=1;i<=9;i++)
+                    {
+                        const imageNumber="image"+i;
+                        const img=document.getElementById(imageNumber);
+                        img.addEventListener("mouseover",hightlight)
+                        img.addEventListener("mouseout",delight)
+                    }
+
+                    function hightlight()
+                    {
+                        this.style="filter:none; border: solid indigo; border-width: 10px";
+                    }
+    
+                    function delight()
+                    {
+                        this.style="border:none";
+                    }
+                </script>
+                
             </div>
         </main>
 
-        <aside>
-
-        </aside>
-
         <footer>
-
+            <p>Copyright Ostin Mathias</p>
         </footer>
     
     </body>
