@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         
+        <!--Title Of The Website, Links To Bootstrap And StyleSheet Implementation-->
         <title>Manhwa Society</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -11,11 +12,13 @@
 
     <body>
         
+        <!--Header Of The Website And Logo-->
         <header>
             <h1>Tower Of Beginnings</h1>
             <img src="images/ManhwaReadingClubLogo.jpg" alt="Manhwa Society Logo" id="logo">
         </header>
 
+        <!--Navigation Menu Links-->
         <nav>
             <ul>
                 <li><a href="index.html">Main Page</a></li>
@@ -29,21 +32,24 @@
         </nav>
 
         <main>
+            <!--Left Side Of The Webpage-->
             <div id="left-col">
                 <h3>Contact Us</h3>
                 
                 <form id="contactUs">
                     <fieldset>
-                        <!--Contact Us Form Box-->
+                        <!--Name Input-->
 
                         <label id="name">Name:</label>
                         <input type="text" name="name" value="">
                         <br>
                         
+                        <!--Email Input-->
                         <label id="email">Email:</label>
                         <input type="email" name="email" value=""> 
                         <br>
 
+                        <!--Membership Status Check Box-->
                         <label id="membership">Membership Status:</label>
                         <br>
                         <input type="checkbox" name="member" value="Member">
@@ -52,33 +58,41 @@
                         <input type="checkbox" name="nonmember" value="Non-Member">
                         <label id="nonmember">Non-Member</label>
                         <br>
+
+                        <!--Comments Input-->
                         <label id="comments">Comments:</label>
                         <br>
                         <textarea name="comments" cols="45" rows="5"></textarea> 
                         <br>
                         
+                        <!--File Attachment-->
                         <label id="file">Attach a file:</label>
                         <input type="file" name="file">
                         <br>
                         
+                        <!--Submittion Button-->
                         <button type="button" onclick='document.getElementById("form_outcome").innerHTML="Form has been sent successfully!"'>Submit</button>
                     </fieldset>
                 </form>
                 
+                <!--Feedback For The Form Submission-->
                 <div>
                     <p id="form_outcome"></p>
                 </div>
             
             </div>
 
+            <!--Right Side Of The Webpage-->
             <div id="right-col">
                 <h3>Latest Manhwa News</h3>
                 
+                <!--Twiiter Embed Link Code-->
                 <a class="twitter-timeline" data-lang="en" data-height="423" data-theme="light" href="https://twitter.com/MangaMoguraRE?ref_src=twsrc%5Etfw">Tweets by MangaMoguraRE</a>
                 <script async src="https://platform.twitter.com/widgets.js"></script>
             </div>
         </main>
 
+        <!--Copyright Footer At The Bottom Of The Website-->
         <footer>
             <p>Copyright Ostin Mathias</p>
         </footer>
