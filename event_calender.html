@@ -15,6 +15,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/main.css">
+        <script src="scripts/scripts.js"></script>
     
     </head>
 
@@ -129,37 +130,10 @@
                         <br>
 
                         <!--Linking The Submit Button To The Script-->
-                        <button onclick="submitEvent()">Submit</button>
+                        <button type="button" onclick="submitEvent()">Submit</button>
                     </fieldset>
                 </form>
             </div>
-
-            <!--Script Coding For Event Suggestions-->
-            <script>
-                function submitEvent()
-                {
-                    var title=document.forms["eventForm"]["event_title"].value;
-                    var date=document.forms["eventForm"]["event_date"].value;
-
-                    //Making Sure The Title Isnt Blank
-                    if(title=="")
-                    {
-                        alert("The Name Of The Event Cannot Be Blank!");
-                    }
-
-                    //Making Sure The Date Has Been Chosen
-                    else if(date.length==0)
-                    {
-                        alert("The Date Of The Event Cannot Be Blank!");
-                    }
-
-                    //Giving The Output If The Event Has Been Submitted Successfully
-                    else
-                    {
-                        alert("Event Submitted! The Society Will Get Back To You Soon <3");
-                    }
-                }
-            </script>
         </main>
 
         <!--Copyright Footer At The Bottom Of The Website-->
